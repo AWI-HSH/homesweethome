@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HomeSweetHome – Dein Zuhause schöner & cleverer einrichten</title>
+<meta name="description" content="Tipps und Lieblingsprodukte, um dein Zuhause gemütlicher zu machen – von cleveren Einrichtungsideen bis zu Helfern für jede Jahreszeit.">
+
+<!-- ====================================================================
+     HOMESWEETHOME – Affiliate Landingpage
+     --------------------------------------------------------------------
+     SO FÜGST DU DEINE AFFILIATE-LINKS EIN:
+     Suche im Code nach  AFFILIATE_LINK_HIER
+     und ersetze es durch deinen echten Amazon-/Awin-Link.
+     Es gibt einen pro Produkt. Mehr nicht.
+     ==================================================================== -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --paper:#F7F4EF;
+    --surface:#FCFAF6;
+    --ink:#2C2A26;
+    --ink-soft:#6B655C;
+    --sage:#5F6E52;
+    --sage-light:#7C8A6E;
+    --sand:#E8E0D3;
+    --border:#E5DFD4;
+    --radius:14px;
+    --maxw:680px;
+    --display:"Fraunces", Georgia, serif;
+    --body:"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0;}
+
+  html{scroll-behavior:smooth;}
+
+  body{
+    font-family:var(--body);
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  .wrap{
+    max-width:var(--maxw);
+    margin:0 auto;
+    padding:0 22px;
+  }
+
+  /* ---------- Header ---------- */
+  header{
+    text-align:center;
+    padding:64px 22px 40px;
+  }
+  .brand{
+    font-family:var(--display);
+    font-weight:600;
+    font-size:clamp(34px,7vw,48px);
+    letter-spacing:-0.02em;
+    line-height:1.05;
+  }
+  .brand .heart{color:var(--sage-light);}
+  .tagline{
+    font-size:16px;
+    color:var(--ink-soft);
+    margin-top:14px;
+    max-width:440px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  /* ---------- Intro ---------- */
+  .intro{
+    text-align:center;
+    padding:8px 0 48px;
+  }
+  .intro p{
+    font-size:17px;
+    color:var(--ink-soft);
+    max-width:520px;
+    margin:0 auto;
+  }
+
+  /* ---------- Section ---------- */
+  section{padding:28px 0;}
+
+  .eyebrow{
+    display:inline-block;
+    font-size:12.5px;
+    font-weight:600;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--sage);
+    background:var(--sand);
+    padding:6px 14px;
+    border-radius:100px;
+  }
+
+  .section-head{
+    text-align:center;
+    margin-bottom:30px;
+  }
+  .section-head h2{
+    font-family:var(--display);
+    font-weight:500;
+    font-size:clamp(26px,5vw,34px);
+    letter-spacing:-0.01em;
+    margin-top:16px;
+    line-height:1.15;
+  }
+  .section-head .lead{
+    font-size:16px;
+    color:var(--ink-soft);
+    margin-top:14px;
+    max-width:500px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  /* ---------- Product cards ---------- */
+  .products{
+    display:grid;
+    gap:16px;
+  }
+
+  .card{
+    display:flex;
+    gap:18px;
+    align-items:center;
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    padding:16px;
+    transition:transform .18s ease, box-shadow .18s ease;
+  }
+  .card:hover{
+    transform:translateY(-2px);
+    box-shadow:0 10px 30px -18px rgba(44,42,38,.4);
+  }
+
+  .thumb{
+    flex:0 0 88px;
+    width:88px;
+    height:88px;
+    border-radius:10px;
+    background:linear-gradient(135deg,var(--sand),#D9CFBE);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:30px;
+    overflow:hidden;
+  }
+  .thumb img{width:100%;height:100%;object-fit:cover;}
+
+  .card-body{flex:1;min-width:0;}
+  .card-body h3{
+    font-family:var(--display);
+    font-weight:500;
+    font-size:19px;
+    letter-spacing:-0.01em;
+  }
+  .card-body p{
+    font-size:14.5px;
+    color:var(--ink-soft);
+    margin-top:4px;
+  }
+
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:7px;
+    margin-top:10px;
+    font-family:var(--body);
+    font-size:14px;
+    font-weight:600;
+    color:#fff;
+    background:var(--sage);
+    padding:9px 16px;
+    border-radius:100px;
+    text-decoration:none;
+    transition:background .15s ease;
+  }
+  .btn:hover{background:var(--sage-light);}
+  .btn:focus-visible{outline:3px solid var(--sage-light);outline-offset:2px;}
+  .btn .arrow{transition:transform .15s ease;}
+  .btn:hover .arrow{transform:translateX(2px);}
+
+  /* ---------- Coming soon ---------- */
+  .soon-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:16px;
+    margin-top:8px;
+  }
+  .soon{
+    border:1px dashed var(--border);
+    border-radius:var(--radius);
+    padding:26px 20px;
+    text-align:center;
+    background:transparent;
+  }
+  .soon .icon{font-size:26px;}
+  .soon h3{
+    font-family:var(--display);
+    font-weight:500;
+    font-size:19px;
+    margin-top:10px;
+  }
+  .soon span{
+    display:block;
+    font-size:13px;
+    color:var(--ink-soft);
+    margin-top:6px;
+  }
+
+  /* ---------- Divider ---------- */
+  .rule{
+    height:1px;
+    background:var(--border);
+    max-width:var(--maxw);
+    margin:24px auto;
+  }
+
+  /* ---------- Footer ---------- */
+  footer{
+    padding:44px 22px 60px;
+    text-align:center;
+  }
+  .social{
+    display:flex;
+    gap:22px;
+    justify-content:center;
+    margin-bottom:22px;
+  }
+  .social a{
+    font-size:14px;
+    font-weight:600;
+    color:var(--ink);
+    text-decoration:none;
+    border-bottom:2px solid var(--sand);
+    padding-bottom:2px;
+  }
+  .social a:hover{border-color:var(--sage-light);}
+  .disclosure{
+    font-size:13px;
+    color:var(--ink-soft);
+    max-width:520px;
+    margin:0 auto;
+    line-height:1.7;
+  }
+  .copyright{
+    font-size:12.5px;
+    color:var(--ink-soft);
+    margin-top:18px;
+    opacity:.8;
+  }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width:520px){
+    .card{flex-direction:column;align-items:flex-start;text-align:left;}
+    .thumb{width:100%;height:120px;flex-basis:auto;}
+    .soon-grid{grid-template-columns:1fr;}
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    *{transition:none !important;scroll-behavior:auto !important;}
+  }
+</style>
+</head>
+<body>
+
+  <header>
+    <h1 class="brand">Home<span class="heart">Sweet</span>Home</h1>
+    <p class="tagline">Dein Zuhause schöner, gemütlicher &amp; cleverer einrichten</p>
+  </header>
+
+  <main class="wrap">
+
+    <div class="intro">
+      <p>Willkommen! Hier findest du meine liebsten Tipps und Produkte, um dein Zuhause gemütlicher zu machen – von cleveren Einrichtungsideen bis zu Helfern für jede Jahreszeit. Viel Freude beim Stöbern.</p>
+    </div>
+
+    <!-- ============ SOMMER-HITZE BLOCK (Ziel deiner Pins) ============ -->
+    <section id="sommer-hitze">
+      <div class="section-head">
+        <span class="eyebrow">☀️ Sommer-Edition</span>
+        <h2>Wohnung kühl halten im Sommer</h2>
+        <p class="lead">Wenn die Hitze kommt, wird die Wohnung schnell zur Sauna. Diese Helfer haben sich bei mir bewährt, um auch an heißen Tagen einen kühlen Kopf – und ein kühles Schlafzimmer – zu behalten.</p>
+      </div>
+
+      <div class="products">
+
+        <!-- Produkt 1 -->
+        <article class="card">
+          <div class="thumb">🌀</div>
+          <div class="card-body">
+            <h3>Leiser Ventilator</h3>
+            <p>Stand- oder Turmventilator für sofortige Abkühlung – auch nachts angenehm leise.</p>
+            <a class="btn" href="https://amzn.to/4uFmVSz" target="_blank" rel="nofollow sponsored noopener">Auf Amazon ansehen <span class="arrow">→</span></a>
+          </div>
+        </article>
+
+        <!-- Produkt 2 -->
+        <article class="card">
+          <div class="thumb">🪟</div>
+          <div class="card-body">
+            <h3>Verdunklungsvorhänge</h3>
+            <p>Halten die Sonne draußen und die Kühle drinnen. Der größte Effekt für wenig Geld.</p>
+            <a class="btn" href="https://amzn.to/4vlgzco" target="_blank" rel="nofollow sponsored noopener">Auf Amazon ansehen <span class="arrow">→</span></a>
+          </div>
+        </article>
+
+        <!-- Produkt 3 -->
+        <article class="card">
+          <div class="thumb">🛏️</div>
+          <div class="card-body">
+            <h3>Kühlende Bettwäsche</h3>
+            <p>Aus Leinen oder Bambus – sorgt für erholsamen Schlaf auch in heißen Nächten.</p>
+            <a class="btn" href="https://amzn.to/4fTs0mJ" target="_blank" rel="nofollow sponsored noopener">Auf Amazon ansehen <span class="arrow">→</span></a>
+          </div>
+        </article>
+
+        <!-- Produkt 4 -->
+        <article class="card">
+          <div class="thumb">❄️</div>
+          <div class="card-body">
+            <h3>Mobiler Luftkühler</h3>
+            <p>Die günstigere Alternative zur Klimaanlage – ideal für einzelne Räume.</p>
+            <a class="btn" href="https://amzn.to/4euzbPS" target="_blank" rel="nofollow sponsored noopener">Auf Amazon ansehen <span class="arrow">→</span></a>
+          </div>
+        </article>
+
+        <!-- Produkt 5 -->
+        <article class="card">
+          <div class="thumb">🌞</div>
+          <div class="card-body">
+            <h3>Hitzeschutz-Fensterfolie</h3>
+            <p>Reflektiert die Sonne, bevor sie den Raum aufheizt. Besonders stark für Süd- und Dachfenster.</p>
+            <a class="btn" href="https://amzn.to/4vPZxCT" target="_blank" rel="nofollow sponsored noopener">Auf Amazon ansehen <span class="arrow">→</span></a>
+          </div>
+        </article>
+
+        <!-- Produkt 6 -->
+        <article class="card">
+          <div class="thumb">🪴</div>
+          <div class="card-body">
+            <h3>Zimmerpflanzen fürs Raumklima</h3>
+            <p>Verbessern das Klima und sehen wunderschön aus – meine Lieblingskombi für den Sommer.</p>
+            <a class="btn" href="https://amzn.to/4aPwNlu" target="_blank" rel="nofollow sponsored noopener">Mehr erfahren <span class="arrow">→</span></a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <div class="rule"></div>
+
+    <!-- ============ PLATZHALTER: Shop & Bücher ============ -->
+    <section id="bald">
+      <div class="soon-grid">
+        <div class="soon">
+          <div class="icon">🛍️</div>
+          <h3>Mein Shop</h3>
+          <span>Bald verfügbar: nachhaltige Designs &amp; Produkte</span>
+        </div>
+        <div class="soon">
+          <div class="icon">📚</div>
+          <h3>Bücher &amp; Malbücher</h3>
+          <span>Bald verfügbar</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="social">
+      <a href="https://ch.pinterest.com/alainwipf0037/" target="_blank" rel="noopener">Pinterest</a>
+      <a href="https://www.youtube.com/@alainwipf1873/posts" target="_blank" rel="noopener">YouTube</a>
+    </div>
+    <p class="disclosure">
+      Diese Seite enthält Affiliate-Links (Werbung). Wenn du über diese Links etwas kaufst, erhalte ich eine kleine Provision – für dich bleibt der Preis gleich. Vielen Dank für deine Unterstützung. 💛
+    </p>
+    <p class="copyright">© <span id="year"></span> HomeSweetHome</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
